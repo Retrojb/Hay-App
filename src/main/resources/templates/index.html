@@ -3,17 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
-    <title>Welcome to the Hay App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"  />
-    
+    <title>Welcome to the Hay App</title>
 </head>
 <body>
     <h1>Welcome to the Hay-App</h1>
     <ul>
         <li th:each="farmer : ${farmers}">
-          <a th:href="|@{index/}${farmer.farmName}|"></a>
-            <span  th:text="${farmer.farmName}"></span>
-        
+          <a th:href="|@{index/}${farmer.farmerUserName}|">
+            <span  th:text="${farmer.farmerUserName}"></span>
+        </a>
         </li>
     </ul>
 </body>
