@@ -2,13 +2,19 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
     <title>Welcome to the Hay App</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"  />
+    
 </head>
 <body>
     <h1>Welcome to the Hay-App</h1>
+    <ul>
+        <li th:each="farmer : ${farmers}">
+          <a th:href="|@{index/}${farmer.farmName}|"></a>
+            <span  th:text="${farmer.farmName}"></span>
+        
+        </li>
+    </ul>
 </body>
 </html>
