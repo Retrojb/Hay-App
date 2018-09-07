@@ -15,8 +15,13 @@ public class FarmerController {
 	CropRepository cropRepo;
 	
 	@RequestMapping("/")
-	public String home(Model model) {
-		return "redirect:/index";
+	public String landingPage(Model model) {
+		return "redirect:/home";
+	}
+	
+	@RequestMapping("/home")
+	public String getHome(Model model) {
+		return "home";
 	}
 	
 	@RequestMapping("/index")

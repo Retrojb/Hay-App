@@ -1,0 +1,19 @@
+.navbar{
+    border: 3px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.navbar li{
+    border: 2px solid red;
+    margin:.3rem;
+    list-style: none;
+}
+.navbar ul li a {
+    text-decoration: none;
+
+}
