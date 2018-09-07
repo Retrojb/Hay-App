@@ -2,7 +2,19 @@
     border: 3px solid black;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+}
+
+.item-1{
+    display: flex;
+    flex-direction: row;
+}
+.item-2{
+    display: flex; 
+}
+.logo{
+    height: 60px;
+    width:60px;   
 }
 .navbar ul{
     display: flex;
@@ -10,8 +22,10 @@
     justify-content: flex-end;
 }
 .navbar li{
-    border: 2px solid red;
-    margin:.3rem;
+    display: flex;
+    align-items: center;
+    margin:.5rem;
+    padding: .5rem;
     list-style: none;
 }
 .navbar ul li a {

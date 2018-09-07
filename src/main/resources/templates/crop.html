@@ -5,18 +5,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
     <title>Crop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"  />
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css" />
+
 </head>
 <body>
-    <nav>
-        <ul>
+    <nav class="navbar">
+            <figure class="item-1"><img src="../Images/hay-icon.png" class="logo" /> <h2>Hay App</h2></figure>
+            <div></div>
+         <ul class="item-2">
             <li><a th:href="@{/index}">Return to Home</a></li>
             <li><a th:href="|@{/index/}${farmer.farmerUserName}|"><span th:text="${farmer.farmerUserName}"></span></a></li>
+            <li>
+                    <a th:href="@{/index}">Contact Us</a>
+                </li>
+                <li>
+                    <a th:href="@{/index/cropList}">Crop List</a>
+                </li>
         </ul>
     </nav>
     <h1>This is the Crop page</h1>
     <h2 th:text="${crop.cropName}"></h2>
     <h4 th:text="${crop.cropType}"></h4>
+
+    <footer class="footer">
+            <h4>Hay-App</h4>
+            <small>Handcrest 2018</small>
+        </footer>
 </body>
 </html>

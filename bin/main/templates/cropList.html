@@ -6,12 +6,15 @@
     <title>Crop List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"  />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/footer.css" />
 </head>
 <body>
     <nav class="navbar"> 
-            <ul>
+        <figure class="item-1"><img src="../Images/hay-icon.png" class="logo" /> <h2>Hay App</h2></figure>
+           <div></div>
+        <ul class="item-2">
                     <li>
-                        <a th:href="@{/index}">Return to Home</a>
+                        <a th:href="@{/index}">Home</a>
                     </li>
                     <li>
                         <a th:href="@{/index}">Contact Us</a>
@@ -21,12 +24,19 @@
                     </li>
                 </ul>
     </nav>
+    <main class="container">
     <h1>List of Crops on Hay-App</h1>
     <ul>
         <li th:each="crop : ${crops}">
             <a th:href="|@{/index/cropList/cropDetail/}${crop.cropId}|"><span th:text="${crop.cropName}"></span></a>
         </li>
     </ul>
+</main>
+
+<footer class="footer">
+    <h4>Hay-App</h4>
+    <small>Handcrest 2018</small>
+</footer>
     
 </body>
 </html>
