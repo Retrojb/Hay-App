@@ -39,7 +39,7 @@ public class Crop {
 		this.farmer = farmer;
 	}
 
-	public Long getId() {
+	public Long getCropId() {
 		return cropId;
 	}
 
@@ -59,4 +59,7 @@ public class Crop {
 		return farmer;
 	}
 
+	public String toString() {
+		return cropName;
+	}
 }

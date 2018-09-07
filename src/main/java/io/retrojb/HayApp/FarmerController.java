@@ -26,9 +26,19 @@ public class FarmerController {
 	}
 	
 	@RequestMapping("/index/{farmerUserName}")
-	public String getFarmer(@PathVariable (name = "farmerUserName")String farmerUserName, Model model) {
+	public String getFarmer(@PathVariable (name = "farmerUserName")String farmerUserName,
+							Model model) {
 		model.addAttribute("farmer", farmerRepo.findByFarmerUserName(farmerUserName));
 		return "farmer";
+	}
+	
+	@RequestMapping("/index/{farmerUserName}/crops/{cropId}")
+	public String getCrop(@PathVariable (name = "farmerUserName") String farmerUserName, 
+						@PathVariable (name = "cropId") Long cropId,
+									Model model) {
+		model.addAttribute("farmer", farmerRepo.findByFarmerUserName(farmerUserName));
+		model.addAttribute("crop", cropRepo.findOne(cropId));
+		return "crop";
 	}
 	
 	

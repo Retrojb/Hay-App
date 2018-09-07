@@ -8,9 +8,19 @@
 </head>
 <body>
     <h1>Welcome to Farmer Page</h1>
+    <h2 th:text="${farmer.farmerUserName}"></h2>
+    <div>
+        <span th:text="${farmer.farmName}"></span>
+        <span th:text="${farmer.firstName}"></span>
+        <span th:text="${farmer.address}"></span>
+        <span th:text="${farmer.zipCode}"></span>
+    </div>
+
     <ul>
-        <li th:each="crop : ${crops}">
-            <span th:text="${crop.cropType}"></span>
+        <li th:each="crop : ${farmer.crops}">
+           <a th:href="|@{/index/}${farmer.farmerUserName}@{/crops/}${crop.cropId}|"> 
+            <span th:text="${crop.cropName}"></span>
+        </a>
         </li>
     </ul>
 </body>
