@@ -13,7 +13,6 @@ public class Farmer {
 	
 	@Id
 	@GeneratedValue
-	
 	private Long farmerId;
 	private String farmerUserName;
 	private String password;

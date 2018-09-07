@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"  />
+    <title th:text="${crop.cropName}"></title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a th:href="@{/index/cropList}">Return to Crop List</a>
+            </li>
+            <li>
+                <a th:href="@{/index}">Return to Home</a>
+            </li>
+        </ul>
+    </nav>
+    <h1>This is one single crop</h1>
+    <h2 th:text="${crop.cropName}"></h2>
+</body>
+</html>

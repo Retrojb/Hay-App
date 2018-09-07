@@ -8,12 +8,21 @@
 </head>
 <body>
     <h1>Welcome to the Hay-App</h1>
+    <input type="text" placeholder="search..."  />
     <ul>
         <li th:each="farmer : ${farmers}">
-          <a th:href="|@{index/}${farmer.farmerUserName}|">
+          <a th:href="|@{/index/}${farmer.farmerUserName}|">
             <span  th:text="${farmer.farmerUserName}"></span>
         </a>
         </li>
     </ul>
+    <h3><a th:href="@{/index/cropList}">Crop List</a></h3>
+
+    <footer>
+    
+        <h4>Hay-App</h4>
+        <small>Handcrest 2018</small>
+    
+    </footer>
 </body>
 </html>

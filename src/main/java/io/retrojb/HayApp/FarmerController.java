@@ -41,5 +41,16 @@ public class FarmerController {
 		return "crop";
 	}
 	
+	@RequestMapping("/index/cropList")
+	public String getAllCrops(Model model) {
+		model.addAttribute("crops", cropRepo.findAll());
+		return "cropList";
+	}
+	
+	@RequestMapping("/index/cropList/cropDetail/{cropId}")
+	public String getOneCropFromList(@PathVariable(name="cropId") Long cropId, Model model) {
+		model.addAttribute("crop", cropRepo.findOne(cropId));
+		return "cropDetail";
+	}
 	
 }

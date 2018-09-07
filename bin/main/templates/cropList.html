@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
-    <title>Crop</title>
+    <title>Crop List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1"  />
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
@@ -11,12 +11,17 @@
 <body>
     <nav>
         <ul>
-            <li><a th:href="@{/index}">Return to Home</a></li>
-            <li><a th:href="|@{/index/}${farmer.farmerUserName}|"><span th:text="${farmer.farmerUserName}"></span></a></li>
+            <li>
+                <a th:href="@{/index/}">Return Home</a>
+            </li>
         </ul>
     </nav>
-    <h1>This is the Crop page</h1>
-    <h2 th:text="${crop.cropName}"></h2>
-    <h4 th:text="${crop.cropType}"></h4>
+    <h1>List of Crops on Hay-App</h1>
+    <ul>
+        <li th:each="crop : ${crops}">
+            <a th:href="|@{/index/cropList/cropDetail/}${crop.cropId}|"><span th:text="${crop.cropName}"></span></a>
+        </li>
+    </ul>
+    
 </body>
 </html>
