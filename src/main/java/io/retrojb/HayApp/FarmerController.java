@@ -57,5 +57,15 @@ public class FarmerController {
 		model.addAttribute("crop", cropRepo.findOne(cropId));
 		return "cropDetail";
 	}
+	@RequestMapping("/farmerLogin")
+	public String getFarmerLogin(Model model) {
+//	model.addAttribute("farmerLogin", farmerRepo.findAll());
+		return "farmerLogin";
+	}
+	@RequestMapping("/buyerLogin")
+	public String getBuyerLogin(Model model) {
+//	model.addAttribute("buyerLogin", farmerRepo.findAll());
+		return "buyerLogin";
+	}
 	
 }
