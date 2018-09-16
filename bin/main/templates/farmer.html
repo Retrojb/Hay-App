@@ -37,20 +37,22 @@
     </header>
     <main class="container">
     <section class="item">
-    <h2 th:text="${farmer.farmerUserName}"></h2>
+    <div>
+    <h2 th:text="${farmerUserName}"></h2>
     
-        <ul>
+    <ul th:each="farmer : ${farmers}">
         <li th:text="${farmer.farmName}"></li>
         <li th:text="${farmer.firstName}"></li>
         <li th:text="${farmer.address}"></li>
         <li th:text="${farmer.zipCode}"></li>
     </ul>
+    </div>
 </section>
 <section class="item">
     <h2>Available Crops:</h2>
     <ul>
-        <li th:each="crop : ${farmer.crops}">
-           <a th:href="|@{/index/}${farmer.farmerUserName}@{/crops/}${crop.cropId}|"> 
+        <li th:each="crop : ${crops}">
+           <a th:href="|@{/index/}${farmerUserName}@{/crops/}${crop.cropId}|"> 
             <span th:text="${crop.cropName}"></span>
         </a>
         </li>
