@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"  />
     <meta http-equiv="X-UA-Compatible" content="ie=edge"  />
     <link rel="stylesheet" type="text/css" media="screen" href="../css/landing.css" />
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
     <div class="container">
@@ -14,7 +14,12 @@
     <h3>Changing the way you hay</h3>
     <button><a th:href="@{/farmerLogin/}">Farmer</a></button>
     <button><a th:href="@{/buyerLogin/}">Buyer</a></button>
+    <div>
+            <h3>Not a member? Sign up now</h3>
+            <button><a th:href="@{/signUpPage/}">Sign Up</a></button>
+        </div>
     </div>
     </div>
+   
 </body>
 </html>
