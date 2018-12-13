@@ -51,7 +51,7 @@
 <section class="item">
     <h2>Available Crops:</h2>
     <ul>
-        <li th:each="crop : ${farmer.crops}">
+        <li th:each="crop : ${crops}">
            <a th:href="|@{/index/}${farmerUserName}@{/crops/}${crop.cropId}|"> 
             <span th:text="${crop.cropName}"></span>
         </a>
